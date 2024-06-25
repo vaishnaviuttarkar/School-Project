@@ -14,14 +14,24 @@
                 <input type="hidden" name="old_file" id="old_file" value="<?php echo $image; ?>">
                 <div class="row" >
                     <div class="col-md-2">
-                        <label for="from"><strong>NAME</strong></label>
+                        <label for="name">
+                            <strong>
+                                NAME
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <input type="text" class="form-control" name="name" id="name" placeholder="NAME" value="<?php echo $name; ?>">
                         <span style="color:red;"><?php echo form_error('name'); ?></span>
                     </div>
                     <div class="col-md-2">
-                        <label for="from"><strong>EMAIL</strong></label>
+                        <label for="email">
+                            <strong>
+                                EMAIL
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL" value="<?php echo $email; ?>">
@@ -30,14 +40,24 @@
                 </div>
                 <div class="row mt-5" >
                     <div class="col-md-2">
-                        <label for="address"><strong>ADDRESS</strong></label>
+                        <label for="address">
+                            <strong>
+                                ADDRESS
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <input type="text" class="form-control" name="address" id="address" placeholder="ADDRESS" value="<?php echo $address; ?>">
                         <span style="color:red;"><?php echo form_error('address'); ?></span>
                     </div>
                     <div class="col-md-2">
-                        <label for="class"><strong>CLASS</strong></label>
+                        <label for="class">
+                            <strong>
+                                CLASS
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <select class="form-control" name="class" id="class"><?php
@@ -59,7 +79,12 @@
                 </div>
                 <div class="row mt-5" >
                     <div class="col-md-2">
-                        <label for="image"><strong>IMAGE</strong></label>
+                        <label for="image">
+                            <strong>
+                                IMAGE
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <input type="file"  class="form-control" name="image" id="image">

@@ -13,7 +13,12 @@
                 <input type="hidden" name="srno" id="srno" value="<?php echo $srno; ?>">
                 <div class="row" >
                     <div class="col-md-2">
-                        <label for="from"><strong>NAME</strong></label>
+                        <label for="name">
+                            <strong>
+                                NAME
+                                <span style="color:red;">*</span>
+                            </strong>
+                        </label>
                     </div>
                     <div class="col-md-4">
                         <input type="text" class="form-control" name="name" id="name" placeholder="NAME" value="<?php echo $name; ?>">
