@@ -1,10 +1,3 @@
-<?php 
-// Report all PHP errors
-error_reporting(0);
-
-// Disable error display on the webpage
-// ini_set('display_errors', 1);
-?>
 <div class="container mt-5">
     <div class="card mt-2">
         <div class="card-header">
@@ -51,5 +44,4 @@ error_reporting(0);
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
 <script src="<?php echo base_url('assets/js/school/classes.js'); ?>" type="text/javascript"></script>

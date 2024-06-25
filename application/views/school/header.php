@@ -5,35 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>School</title>
     <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <style>
-    .tbhead{
-        color: white;
-        background-color: black;
-    }
-    .bg-dark {
-      background-color: #343a40;
-      color: white; /* Optional: to make the text color white for better readability */
-    }
-    .image_style{
-      height: 20px; 
-      width: 20px;
-      cursor: pointer;
-    }
-    .header_image_style{
-      height: 40px; 
-      width: 40px;
-      cursor: pointer;
-    }
-    .thumnbnail{
-      height: 100px; 
-      width: 100px;
-    }
-    .btn-black {
-      color: #fff;
-      background-color: #000000;
-      border-color: #000000;
-    }
-  </style>
+    <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet" >
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">

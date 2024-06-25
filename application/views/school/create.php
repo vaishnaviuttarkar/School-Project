@@ -65,7 +65,6 @@
                         <input type="file"  class="form-control" name="image" id="image">
                     </div>
                     <div class="col-md-4">
-                        <span style="color:red;"><?php echo $empty_file;?></span>
                         <span style="color:red;"><?php echo $upload_error;?></span>
                         <strong><u><a target="__blank" href="<?php echo site_url("./uploads/$image");?>" style="color:black;"><?php echo $image; ?></a></u></strong>
                     </div>
@@ -80,8 +79,3 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- <script src="your-custom-script.js"></script> -->
-
-<script src="<?php echo base_url('assets/js/ssd/sell.js'); ?>" type="text/javascript"></script>
-

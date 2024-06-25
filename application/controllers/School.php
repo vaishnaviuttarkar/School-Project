@@ -15,7 +15,7 @@ class School extends CI_Controller {
     public function index()
     {
         $data['display_student']=$this->School_model->display_student();
-        // print_r($data['display_student']);
+
         $this->load->view('school/header');
         $this->load->view('school/index',$data);
 		$this->load->view('school/footer');
@@ -23,7 +23,6 @@ class School extends CI_Controller {
 
     public function create()
     {
-        // $data['srno']=$srno;
         $data['display_class']=$this->School_model->display_class('');
         $this->load->view('school/header');
         $this->load->view('school/create',$data);
@@ -94,7 +93,6 @@ class School extends CI_Controller {
             $data['srno']=$gcd['class_id'];
             $data['name']=$gcd['name'];
         }
-        // print_r($get_class_details);
 
         $this->load->view('school/header');
         $this->load->view('school/create_class',$data);
@@ -103,7 +101,7 @@ class School extends CI_Controller {
 
     // Action function of class form
     public function submit_class() {
-        // Set validation rules for the name
+        // Set validation rules 
         $this->form_validation->set_rules('name', 'Name', 'required', array('required' => 'The %s field is required.'));
         
         $srno=$this->input->post('srno');
@@ -142,7 +140,7 @@ class School extends CI_Controller {
 
     // Action function of student form
     public function submit_student() {
-        // Set validation rules for the name
+        // Set validation rules
         $this->form_validation->set_rules('name', 'Name', 'required', array('required' => 'The %s field is required.'));
         $this->form_validation->set_rules('email', 'Email', 'required', array('required' => 'The %s field is required.'));
         $this->form_validation->set_rules('address', 'Address', 'required', array('required' => 'The %s field is required.'));
@@ -168,10 +166,6 @@ class School extends CI_Controller {
         // Check if form validation passed
         if ($this->form_validation->run() == FALSE) {
 
-            // if(trim($_FILES['image']['name'])=="")
-            // {
-            //     $data['empty_file']="File name cannot be empty";
-            // }
             // Load the form view with validation errors
             $this->load->view('school/header');
             $this->load->view('school/create',$data);
@@ -187,8 +181,6 @@ class School extends CI_Controller {
                 $file_name = $file_info['filename'] . '_' . time() . '.' . $file_info['extension'];
                 $config['file_name']=$file_name;
             }
-
-            // $config['encrypt_name'] = TRUE;
 
             $this->upload->initialize($config);
 
@@ -224,10 +216,8 @@ class School extends CI_Controller {
                 $file_name = $upload_data['file_name'];
 
                 // Ensure unique filename by appending a timestamp if it already exists
-
                 if($srno)
                 {
-
                     // Case when image is updated
                     $fp=getcwd()."/uploads/".$old_file;
                     if (file_exists("$fp")) {
@@ -246,8 +236,6 @@ class School extends CI_Controller {
                 }
                 else
                 {
-
-
                     // New Entry
                     $student_data = array(
                         'name' => $this->input->post('name'),
@@ -259,8 +247,6 @@ class School extends CI_Controller {
                     );
                     $this->db->insert('school_db.student', $student_data);
                 }
-
-
                 redirect('School/index');
             }
         }
@@ -293,7 +279,6 @@ class School extends CI_Controller {
         $srno=$this->input->get('srno');
 
         $data['result']=$this->School_model->delete_entry($srno,'classes','class_id');
-        // $value_display_class=$this->School_model->display_class("$cond");
 
         echo json_encode($data);
     }
